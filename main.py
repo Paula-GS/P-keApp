@@ -25,7 +25,7 @@ indicadores = []  #recuerda que los corchetes te dicen que es una lista
 for item in stats: #esto recorre la lista, tomando cada pedazo en una iteración.
     indicadores.append(item["base_stat"]) #en cada elemento se consulta el base stat
 
-print(indicadores)
+#print(indicadores)
 
 pok_hp, ataque, defensa, sp_ataque, sp_defensa, velocidad = indicadores #asigna cada elemento a su equivalente en la lista extraída de la api
 
@@ -50,6 +50,8 @@ tipos = []
 for item in tipos_lista:
     tipos.append(item["type"]["name"])
 
+#print(tipos)
+
 #COMENTARIO ALEATORIO DEL POKEMON EN ESPAÑOL
 comentarios = data_eprevia["flavor_text_entries"] #trae todos los comentarios en todos los idiomas
 
@@ -57,4 +59,22 @@ filtro = [item["flavor_text"].replace("\n", " ") for item in comentarios if item
 
 p_comentario = random.choice(filtro) #toma un comentario y lo elige para ser impreso
 
+
+def traduccion(lista): #span
+    diccionario_ing_es = {
+      "normal": "Normal", "fire": "Fuego", "flying": "Volador",
+      "steel": "Acero", "water": "Agua", "electric": "Eléctrico",
+      "grass": "Planta", "ice": "Hielo", "fighting": "Lucha",
+      "poison": "Veneno", "ground": "Tierra", "psychic": "Psíquico",
+      "bug": "Bicho", "rock": "Roca", "ghost": "Fantasma",
+      "dragon": "Dragón", "dark": "Siniestro", "steel": "Acero",
+      "fairy": "Hada" }
+
+    span_str = ""
+    for item in lista:
+        item_es = diccionario_ing_es.get(item)
+        span_str = span_str + f'<span class=" {item}">{item_es}</span>'
+    return span_str
+
+span_tipo = (traduccion(tipos))
 

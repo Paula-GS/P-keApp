@@ -1,4 +1,4 @@
-def traduccion():
+def traduccion(lista): #span
     diccionario_ing_es = {
       "normal": "Normal", "fire": "Fuego", "flying": "Volador",
       "steel": "Acero", "water": "Agua", "electric": "Eléctrico",
@@ -7,3 +7,5 @@ def traduccion():
       "bug": "Bicho", "rock": "Roca", "ghost": "Fantasma",
       "dragon": "Dragón", "dark": "Siniestro", "steel": "Acero",
       "fairy": "Hada" }
+
+  
