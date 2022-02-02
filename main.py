@@ -59,6 +59,23 @@ filtro = [item["flavor_text"].replace("\n", " ") for item in comentarios if item
 
 p_comentario = random.choice(filtro) #toma un comentario y lo elige para ser impreso
 
+#EFECTIVO CONTRA
+url_damage = f"https://pokeapi.co/api/v2/type/fire/"
+data_damage = get_info(url_damage)
+
+
+super_efectivo = data_damage["damage_relations"]["double_damage_from"] #aquí vas, llegas a extraer esta información pero no puedes seguir más alla
+
+print(super_efectivo)
+
+'''
+stats = data_base["stats"] #elige todo el item stats y lo trae. 
+
+indicadores = []  #recuerda que los corchetes te dicen que es una lista
+for item in stats: #esto recorre la lista, tomando cada pedazo en una iteración.
+    indicadores.append(item["base_stat"]) #en cada elemento se consulta el base stat
+
+'''
 
 def traduccion(lista): #span
     diccionario_ing_es = {
@@ -77,4 +94,4 @@ def traduccion(lista): #span
     return span_str
 
 span_tipo = (traduccion(tipos))
-
+#print(traduccion(tipos))
