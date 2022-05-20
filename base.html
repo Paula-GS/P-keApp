@@ -2,56 +2,66 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" type="image/png" href="favicon.png">
         <link rel="stylesheet" href="mystyle.css">
+        <title>$nombre</title>
     </head>
-<body>
+    <body>
 
-    <div class="column2">
-    <div class="card">
-    <h1>$id_n $nombre</h1>
-        <img src="$img_url" width="150" height="150">
-    <h4>$etapa_previa</h4>    
-    <div class="container">
-        
-        <h2>Estadísticas</h2>
-        <table>
-            <tr>
-               <td><h5>HP: $pok_hp</h5></td>
-<td><h5>Ataque: $ataque</h5></td>
-<td><h5>Defensa: $defensa</h5></td>
-<td><h5>Ataque Especial: $sp_ataque</h5></td>
-<td><h5>Defensa Especial: $sp_defensa</h5></td>
-<td><h5>Velocidad: $velocidad</h5></td>
-            </tr>
-        </table>
-        <h3><b>Tipo</b></h3> 
-            <!--<span class="label normal">Normal</span>-->
-            $span_tipo
-            
-        <!--<p>La pesada máscara le impide liberar toda su
-fuerza, que se cree que es extraordinaria.</p>-->
+        <div class="column2">
+        <div class="card" >
+        <h1>#$id_n $nombre</h1>
+            <img src="$img_url" width="150" height="150">
+        <div class="container">
+            <h2>Estadísticas</h2>
+            <table>
+                <tr class="encabezado">
+                    <th><h5>HP</h5></th>
+                    <th><h5>Ataque</h5></th>
+                    <th><h5>Defensa</h5></th>
+                    <th><h5>Ataque Especial</h5></th>
+                    <th><h5>Defensa Especial</h5></th>
+                    <th><h5>Velocidad</h5></th>
+                </tr>
+                <tr>
+                    <td><h5>$pok_hp</h5></td>
+                    <td><h5>$ataque</h5></td>
+                    <td><h5>$defensa</h5></td>
+                    <td><h5>$sp_ataque</h5></td>
+                    <td><h5>$sp_defensa</h5></td>
+                    <td><h5>$velocidad</h5></td>
+                </tr>
+            </table>
+            <h3>Información general</h3>
+            <p>Etapa previa: $etapa_previa </p>
+            <p>$peso kilos</p>
+            <p>$talla metros</p>    
             <p>$p_comentario</p>
+            <h3><b>Tipo</b></h3> 
+                <!--<span class="label normal">Normal</span>-->
+                $span_tipo $baby $legendary $mythical
+               
+        <h3>Super efectivo contra:</h3>
+                $span_efectivo
+        <h3>Débil contra:</h3>
+            <!--<span class="label fighting">Lucha</span>-->
+                $span_debil
+        <h3>Resistente contra:</h3>
+                $span_resistente
+        <h3>Poco Eficaz contra</h3>
+            <!--<span class="label rock">Roca</span>-->
+                $span_peficaz
+    <!--<span class="label steel">Acero</span>-->
+        <h3>Inmune contra:</h3>
+            <!--<span class="label ghost">Fantasma</span>-->
+                $span_inmune
+        <h3>Ineficaz contra:</h3>
+            <!--<span class="label ghost">Fantasma</span>-->
+                $span_ineficaz
         
-    <h3>Super efectivo contra:</h3>
-            $span_efectivo
-    <h3>Débil contra:</h3>
-        <!--<span class="label fighting">Lucha</span>-->
-            $span_debil
-    <h3>Resistente contra:</h3>
-            $span_resistente
-    <h3>Poco Eficaz contra</h3>
-        <!--<span class="label rock">Roca</span>-->
-            $span_peficaz
-<!--<span class="label steel">Acero</span>-->
-    <h3>Inmune contra:</h3>
-        <!--<span class="label ghost">Fantasma</span>-->
-            $span_inmune
-    <h3>Ineficaz contra:</h3>
-        <!--<span class="label ghost">Fantasma</span>-->
-            $span_ineficaz
-    
-    </div>
-    </div>
+        </div>
+        </div>
 
-</body>
+    </body>
 </html>
